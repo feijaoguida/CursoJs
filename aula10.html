@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Curso js - Interval / timeout</title>
+    </head>
+    <body>
+        <script>
+            var i = 0
+
+            function exibeAlgo(){
+                i += 1;
+                console.log('Olá Mundo ' + i);
+            }
+            //se colocar () ira executar somente uma vez.
+            setInterval(exibeAlgo, 1000);
+
+            setTimeout(exibeAlgo, 5000);
+        </script>
+    </body>
+</html>
