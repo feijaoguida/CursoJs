@@ -4,7 +4,34 @@
     </head>
     <body>
         <script>
-            
+            function retornaSexo(sexo){
+                if (sexo === 'M'){
+                    return 'Masculino';
+                } else if (sexo === 'F') {
+                    return 'Feminino';
+                } else{
+                    return 'Outro';
+                }
+            }
+
+            var resultado = retornaSexo('F');
+
+            console.log(resultado);
+
+            function retornaSexoSwitch(sexo){
+                switch (sexo){
+                    case 'M': 
+                        return 'Masculino S';
+                    case 'F': 
+                        return 'Feminino S';
+                    default:
+                        return 'Outro S'
+                }
+            }
+
+            var result = retornaSexoSwitch('M');
+
+            console.log(result);
         </script>
     </body>
 </html>

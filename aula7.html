@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>
+            Curso Js - Operadores Logicos
+        </title>
+    </head>
+    <body>
+        <script>
+
+            //bloco 1
+            var sexo = 'M', idade = 23;
+
+            // && and
+            // || or
+            // ! Not
+            if (sexo !== 'M' || idade >= 18 ){
+                console.log ('OK');
+            }
+
+            // bloco 2
+            var sex = 'F';
+
+            var masculino;
+
+            if (sex === 'M') {
+                masculino = true;
+            } else {
+                masculino = false;
+            }
+
+            console.log (masculino);
+
+            //bloco 3
+            //O bloco 3 é uma forma resumida de fazer o bloco 2
+            var sexx = 'F';
+            //aqui atribui o valor da condicional a variavel feminino.
+            //onde se a var sexx for 'F' então é true se não é false;
+            //o () é opcional.
+            var feminino = (sexx === 'F');
+            console.log(feminino)
+
+        </script>
+    </body>
+</html>
