@@ -1,30 +1,33 @@
 <html>
-    <head>
-        <title>
-            Exercicio 5
-        </title>
-    </head>
-    <body>
-        <script>
-            var usuarios = [
-                {
-                    nome: "Roseweltty",
-                    habilidade: [ "Contabilidade" , "JavaScript", "ReactJs"]
-                },
-                {
-                    nome: "Diego",
-                    habilidade: ["JavaScript", "ReactJs", "Redux"]
-                }
-            ];
-        
-        function escreveLog(usuario){
-            for (u of usuario){
-                console.log(usuario)
+
+<head>
+    <title>
+        Exercicio 5
+    </title>
+</head>
+
+<body>
+    <script>
+        var usuarios = [
+            {
+                nome: "Roseweltty",
+                habilidade: ["Contabilidade", "JavaScript", "ReactJs"]
+            },
+            {
+                nome: "Diego",
+                habilidade: ["JavaScript", "ReactJs", "Redux"]
+            }
+        ];
+
+        function escreveLog(users) {
+            for (const u of users) {
+                console.log("O " + u.nome + " possue as habilidades: " + u.habilidade.join(", "))
             }
         }
-0
-}    
 
-        </script>
-    </body>
+        escreveLog(usuarios)
+
+    </script>
+</body>
+
 </html>
