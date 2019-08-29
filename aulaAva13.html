@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 13 - Js. Avançado</title>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" name="nome" id="nome" class="nome" placeholder="Seu texto aqui"/>
+        <input type="text" name="site" id="site" class="site" placeholder="Endereço do site sem http"/>
+        <button class="botao">Adicionar</button>
+        <br>
+    </div>
+
+    <script>
+        var linkElement = document.createElement('a');
+        var inputElement = document.querySelector('input[name=nome]');
+        var inputElementSite = document.querySelector('input[name=site]');
+        var btnElement = document.querySelector('button.botao');
+
+        btnElement.onclick = function() {
+            var textSite = inputElementSite.value;
+            var text = document.createTextNode(inputElement.value);
+            linkElement.setAttribute('href', 'http://' + textSite)
+            linkElement.appendChild(text)
+             
+
+            var containerElement = document.querySelector('#app');
+            containerElement.appendChild(linkElement);
+
+            console.log(text);
+        }
+
+    </script>
+</body>
+
+</html>

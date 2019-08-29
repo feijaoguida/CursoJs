@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 12 - Js. Avançado</title>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" name="nome" id="nome" class="nome" />
+        <input type="text" name="nome" id="nome2" class="nome"/>
+        <button class="botao">Adicionar</button>
+    </div>
+
+    <script>
+        //var inputElement = document.getElementById('nome');
+        // este getElementsByTabName sempre retorna um vetor e ao informar 
+        // a posição estou trazendo o primeiro. ('input')[0]
+        //var inputElement = document.getElementsByTagName('input');
+        //assim com o anterior esse também retorna um vetor
+        //var inputElement = document.getElementsByClassName('nome')[0]
+        
+        //aqui ele busca o elemento input dentro da div app 
+        //var inputElement = document.querySelector('div#app input');
+        //var inputElement = document.querySelector('input[name=nome]')
+        var inputElement = document.querySelector('input[name=nome]');
+        var btnElement = document.querySelector('button.botao')
+
+        btnElement.onclick = function() {
+            var text = inputElement.value;
+
+            alert(text);
+        }
+
+    </script>
+</body>
+
+</html>
