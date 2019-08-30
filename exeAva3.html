@@ -1,0 +1,44 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercicio Avançado - Exercicio 3</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" name="nome">
+        <button onclick="adicionar()">Adicionar</button>
+        <ul>
+
+        </ul>
+    </div>
+    
+    <script>
+        var nomes = ["Roseweltty", "Diego", "Gabriel", "Lucas"];
+
+        var ulElement = document.querySelector('ul');
+        var inputElement = document.querySelector('input')
+            
+        for (nome of nomes){
+            addItem(nome)
+        }
+
+        function adicionar(){
+            addItem(inputElement.value);
+            inputElement.value = "";
+
+        }
+
+        function addItem(nome){
+            var liElement = document.createElement('li');
+            var listElement = document.createTextNode(nome);
+
+            liElement.appendChild(listElement);
+            ulElement.appendChild(liElement);
+        }
+
+        
+    </script>
+</body>
+</html>

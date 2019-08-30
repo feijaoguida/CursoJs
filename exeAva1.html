@@ -6,20 +6,46 @@
 <body>
     <div id="app">
         <button name="elemento" id="elemento">Criar Elemento</button>
-        <div class="box"> </div>
+       
+        <div id="box"> </div>
 
     </div>
     <script>
 
-        var divElement = document.createElement('div')
+        var btnElement = document.getElementById('elemento');
 
-        var boxElement = document.querySelector('.box');  
-        boxElement.style.backgroundColor = '#F00';
-        boxElement.style.width = 100;
-        boxElement.style.height = 100;
-        
+        var divElement = document.getElementById('box');
 
-        
+        btnElement.onclick = function(){
+            var i = 1;
+
+            var boxElement = document.createElement('div');  
+            boxElement.style.backgroundColor = '#F00';
+            boxElement.style.width = 100;
+            boxElement.style.height = 100;
+            boxElement.setAttribute("id", "item_id"+i);
+
+            //Se eu colocar a função getRandomColor diretamente no evento onmouseover
+            //o java script ira executar ele diretamente 1 vez somente.
+            boxElement.onmouseover = function (){
+                
+                boxElement.style.backgroundColor = getRandomColor();
+            }
+
+            divElement.appendChild(boxElement);
+
+        }
+
+        function getRandomColor(){
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color
+
+        }
+
     </script>
     
 </body>
